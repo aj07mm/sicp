@@ -1,0 +1,22 @@
+* SICP Notes
+
+Notes mostly to myself to go back to some exercises and do something.
+
+** TODO 2-49 add a wave definition
+** TODO 2-51 add a second beside def based on transformations
+** TODO 2-52 complete
+** 2-58-b
+** TODO 2-64 add a comment how partial tree procedure works
+** TODO 2-73 and corresponding check why ** x y 'x dont work
+** TODO 2-74
+** TODO 2-81 I don't get it, ppl say that invoking exp for 2 complex numbers will result
+in infinite loop where in my implementation it correctly reports that no such procedure
+is found for this types.
+
+** TODO 2-82 Find a case when find-right-coercion procedure fails is not working
+
+** TODO In 2-87 I introduced some changes to drop, hierarchy procedures,
+which might have been introduced earlier. Purpose of these changes is to be able to handle
+types that are not part of the central type tower.
+
+** TODO get back finish 2-90 > till section 3

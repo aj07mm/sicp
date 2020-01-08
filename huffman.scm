@@ -96,6 +96,14 @@
 
 (make-leaf-set '((A 4)(B 2)(C 1)(D 1)))
 
+(define (make-leaf symbol weight)
+  (list 'leaf symbol weight))
+
+(define (make-code-tree left right)
+  (list left right
+        (append (symbols left)(symbols right))
+        (+ (weight left)(weight right))))
+
 (define sample-tree
   (make-code-tree (make-leaf 'A 4)
                   (make-code-tree
@@ -106,7 +114,6 @@
 (define sample-message '(0 1 1 0 0 1 0 1 0 1 1 1 0))
 
 (decode sample-message sample-tree)
-
 ;(let1 r (encode (decode sample-message sample-tree) sample-tree)
 ;  (print r)
 ;  (equal? r sample-message))

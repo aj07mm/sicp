@@ -1,0 +1,53 @@
+#lang racket
+(#%require sicp-pict)
+
+(let ((top-left (make-vect 0 1))
+      (top-right (make-vect 1 1))
+      (bottom-left (make-vect 0 0))
+      (bottom-right (make-vect 1 0)))
+  (paint (segments->painter (list
+                             (make-segment top-left top-right)
+                             (make-segment top-right bottom-right)
+                             (make-segment bottom-right bottom-left)
+                             (make-segment bottom-left top-left)
+                             ))))
+
+(let ((top-left (make-vect 0 1))
+      (top-right (make-vect 1 1))
+      (bottom-left (make-vect 0 0))
+      (bottom-right (make-vect 1 0)))
+  (paint (segments->painter (list
+                             (make-segment top-left bottom-right)
+                             (make-segment top-right bottom-left)
+                             ))))
+
+(let ((top-left (make-vect 0 0.5))
+      (top-right (make-vect 0.5 0.5))
+      (bottom-left (make-vect 0 0))
+      (bottom-right (make-vect 0.5 0)))
+  (paint (segments->painter (list
+                             (make-segment top-left top-right)
+                             (make-segment top-right bottom-right)
+                             (make-segment bottom-right bottom-left)
+                             (make-segment bottom-left top-left)
+                             ))))
+
+(let ((p1 (make-vect 0.0 0.75))
+      (p2 (make-vect 0.1 0.60))
+      (p3 (make-vect 0.12 0.7))
+      (p4 (make-vect 0.13 0.685))
+      (p5 (make-vect 0.11 0.8))
+      (p6 (make-vect 0.14 0.9))
+      (p7 (make-vect 0.18 0.9))
+      (p8 (make-vect 0.20 0.8))
+      (p9 (make-vect 0.18 0.685))
+      )
+  (paint (segments->painter (list
+                             (make-segment p1 p2)
+                             (make-segment p2 p3)
+                             (make-segment p3 p4)
+                             (make-segment p4 p5)
+                             (make-segment p5 p6)
+                             (make-segment p7 p8)
+                             (make-segment p8 p9)
+                             ))))

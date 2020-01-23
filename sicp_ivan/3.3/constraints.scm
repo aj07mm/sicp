@@ -1,7 +1,7 @@
 (load "../helpers.scm")
 ; basic constrainst that we could define are mathematical
-; (multiplier a b c) ; holds a b and c in relation a*b = c
-; (adder a b c) ; holds the relation a + b = c
+; (multiplier a b c) ; holds a b and c in relation a * b = c
+; (adder a b c) ; holds a b and c in relation a + b = c
 ; (constant a b) ; holds the relation a = b
 ;
 ; One concrete example of the constraint network is given
@@ -166,9 +166,7 @@
       (cond ((not (has-value? me))
              (set! value newval)
              (set! informant setter)
-             (for-each-except setter
-                              inform-about-value
-                              constraints))
+             (for-each-except setter inform-about-value constraints))
             ((not (= value newval))
              (error "Contradiction" (list value newval)))
             (else 'ignored)))

@@ -1,7 +1,7 @@
 (define (string-join ls delim)
   "Join list of strings together by delim into one string."
   (define out (open-output-string))
-  (for-each (lambda (delim item)
+ (integers-starting-from 2) (for-each (lambda (delim item)
               (display delim out)
               (display item out))
             (cons "" (circular-list delim))
